@@ -1,0 +1,22 @@
+/**/
+footer {
+        background-color: $black;
+        color: $white;
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        text-align: center;
+
+        div {
+                margin: 50px auto ;
+
+                p {
+                        margin-bottom: 0;
+                        @include font(1.5rem, normal);
+                        @media (max-width: $tablette) {
+                                width: 130px ;
+                                @include font(0.75rem, normal);
+                        }
+                }
+        }
+}

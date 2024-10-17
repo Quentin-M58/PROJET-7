@@ -1,0 +1,17 @@
+/*tag*/
+.tag {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+
+        button {
+                color: white;
+                background-color: orangered;
+                border-radius: 15px;
+                text-align: center;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                width: 200px;
+                border: none;
+        }
+}

@@ -1,0 +1,166 @@
+/*logement*/
+
+.logement {
+        main {
+                .info {
+                        display: grid;
+                        grid-template-areas:
+                                'title host'
+                                'tag star';
+                        row-gap: 20px;
+                        justify-content: space-between;
+                        width: 100%;
+                        margin-bottom: 10px;
+
+                        @media (max-width: $tablette) {
+                                grid-template-areas:
+                                        'title title'
+                                        'tag tag'
+                                        'star host';
+                        }
+
+                        .title {
+                                grid-area: title;
+
+                                .title {
+                                        color: $red;
+                                        @include font(2.25rem, normal);
+                                        margin: 0;
+                                }
+
+                                .location {
+                                        margin: 0;
+                                        @include font(1.125rem, normal);
+                                }
+                        }
+
+                        .host {
+                                grid-area: host;
+                                display: flex;
+                                justify-self: right;
+                                gap: 20px;
+                                height: 100%;
+
+                                .name {
+                                        width: 63px;
+                                        text-align: right;
+                                        @include font(1.125rem, normal);
+                                        margin: 5px auto 0 auto;
+
+                                        @media (max-width: $tablette) {
+                                                display: flex;
+                                                align-items: center;
+                                                @include font(0.75rem, normal);
+                                        }
+                                }
+
+                                div {
+                                        display: flex;
+                                        height: 64px;
+                                        border-radius: 50%;
+
+                                        @media (max-width: $tablette) {
+                                                height: 32px;
+                                        }
+
+                                        img {
+                                                border-radius: 50%;
+                                                object-fit: cover;
+                                        }
+                                }
+                        }
+
+                        .tag {
+                                grid-area: tag;
+                                display: flex;
+                                flex-direction: row;
+                                gap: 20px;
+
+                                @media (max-width: $tablette) {
+                                        gap: 5px;
+                                        overflow: auto;
+                                }
+
+                                button {
+                                        color: $white;
+                                        background-color: $red;
+                                        border-radius: 15px;
+                                        text-align: center;
+                                        @include font(0.875rem, bold);
+                                        padding-top: 10px;
+                                        padding-bottom: 10px;
+                                        width: 150px;
+                                        border: none;
+
+                                        @media (max-width: $tablette) {
+                                                width: 100px;
+                                                @include font(0.625rem, bold);
+                                        }
+                                }
+                        }
+
+                        .stars {
+                                grid-area: star;
+                                display: flex;
+                                height: 36px;
+
+                                @media (max-width: $tablette) {
+                                        height: 18px;
+                                        margin: auto 0px;
+                                }
+                        }
+                }
+
+                .descequip {
+                        display: grid;
+                        margin: 20px auto;
+                        grid-template-areas:
+                                'Description Equipments';
+                        column-gap: 50px;
+
+                        @media (max-width: $tablette) {
+                                grid-template-areas:
+                                        'Description'
+                                        'Equipments';
+                        }
+
+                        .collapse {
+                                height: auto;
+
+                                .collapse-title {
+                                        @include font(1.5rem, bold);
+                                        @media (max-width: $tablette){
+                                                @include font(0.8125rem, bold);
+                                        }
+                                }
+                        }
+
+                        .collapse-content {
+                                @include font(1.125rem, normal);
+                                @media (max-width: $tablette){
+                                        @include font(0.75rem, normal);
+                                }
+                        }
+
+                        .Description {
+                                grid-area: Description;
+                                width: 41vw;
+
+                                @media (max-width: $tablette) {
+                                        width: auto;
+                                }
+
+                        }
+
+                        .Equipments {
+                                grid-area: Equipments;
+                                width: 41vw;
+
+                                @media (max-width: $tablette) {
+                                        width: auto;
+                                }
+
+                        }
+                }
+        }
+}

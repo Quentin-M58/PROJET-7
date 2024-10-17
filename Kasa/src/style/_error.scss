@@ -1,0 +1,31 @@
+.error {
+        display: grid;
+        gap: 100px;
+        margin: 100px auto;
+        * {
+                display: grid;
+                justify-content: center;
+                margin: 0;
+        }
+        p {
+                color : $red;
+                &.nberror {
+                        @include font(10rem, 900);
+                        @media (max-width: $tablette) {
+                                @include font(6rem, 900);
+                        }
+                }
+                &.texterror {
+                        @include font(2rem, normal);
+                        @media (max-width: $tablette) {
+                                width: 218px;
+                                text-align: center;
+                                margin: auto;
+                                @include font(1.125rem, normal);
+                        }
+                }
+        }
+        a {
+                text-decoration: underline;
+        }
+}

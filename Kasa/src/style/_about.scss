@@ -1,0 +1,10 @@
+/*about*/
+.about {
+        .info {
+                margin: 40px 50px;
+
+                @media (max-width: $tablette) {
+                        margin: 20px auto;
+                }
+        }
+}
